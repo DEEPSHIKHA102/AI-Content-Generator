@@ -45,7 +45,7 @@ Content_Generator/
 
 - Node.js (v14 or higher)
 - npm or yarn
-- Google Gemini API key (Free!)
+- Open Router API key (Free!)
 
 ### Backend Setup
 
@@ -65,8 +65,7 @@ cp .env.example .env
 ```
 
 4. Get your free Google Gemini API key from [Google AI Studio](https://aistudio.google.com/) and add it:
-```
-GOOGLE_GEMINI_API_KEY=your_key_here
+OpenRouter_API_KEY=your_key_here
 PORT=5000
 FRONTEND_URL=http://localhost:3000
 ```
