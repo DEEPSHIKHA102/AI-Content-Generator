@@ -1,176 +1,68 @@
-# AI Content Generator
+# 🚀 AI Content Generator
 
-A full-stack web application that generates high-quality content using OpenAI's GPT API. Built with Node.js/Express backend and React frontend.
+An AI-powered full-stack web application that generates high-quality content like emails, blogs, social media posts, and more based on user input.
 
-## Project Structure
+🌐 **Live Demo:** https://content-generator-aii.netlify.app
 
-```
-Content_Generator/
-├── backend/          # Express.js server
-│   ├── src/
-│   │   ├── server.js
-│   │   ├── controllers/
-│   │   ├── routes/
-│   │   ├── middleware/
-│   │
-│   ├── package.json
-│   ├── .env.example
-│   
-│
-└── frontend/         # React application
-    ├── src/
-    │   ├── components/
-    │   ├── services/
-    │   ├── App.js
-    │   └── index.js
-    ├── public/
-    ├── package.json
-    ├── .env.example
-```
+---
 
-## Features
+## ✨ Features
 
-- **Generate Content**: Create blog posts, emails, social media content, product descriptions
-- **Multiple Tones**: Choose from Professional, Casual, Friendly, or Formal tones
-- **OpenAI Integration**: Uses GPT-3.5-turbo for content generation
-- **User-Friendly Interface**: Clean, responsive React UI
-- **API-Based Architecture**: RESTful API for easy integration
+- 🧠 AI-based content generation
+- 📝 Supports multiple content types:
+  - Email
+  - Blog Post
+  - Social Media Content
+  - Product Description
+  - Story
+- 🎭 Tone selection:
+  - Professional
+  - Casual
+  - Friendly
+  - Formal
+- ⚡ Fast and real-time response
+- 📋 Copy to clipboard functionality
+- ❌ Error handling and validation
 
-## Quick Start
+---
 
-### Prerequisites
+## 🛠️ Tech Stack
 
-- Node.js (v14 or higher)
-- npm or yarn
-- Open Router API key (Free!)
+### Frontend:
+- React.js
+- CSS
 
-### Backend Setup
+### Backend:
+- Node.js
+- Express.js
 
-1. Navigate to backend folder:
-```bash
-cd backend
-```
+### API Integration:
+- OpenRouter (LLM API)
 
-2. Install dependencies:
-```bash
-npm install
-```
+### Tools:
+- Axios
+- dotenv
+- CORS
 
-3. Create `.env` file:
-```bash
-cp .env.example .env
-```
+---
 
-4. Get your free Open Router Key and add it:
-OpenRouter_API_KEY=your_key_here
-PORT=5000
-FRONTEND_URL=http://localhost:3000
-```
+## 🧠 How It Works
 
-5. Start the server:
-```bash
-npm run dev
-```
+1. User enters:
+   - Prompt
+   - Content Type
+   - Tone
 
-Server runs at: `http://localhost:5000`
+2. Frontend sends a request to backend API
 
-### Frontend Setup
+3. Backend:
+   - Processes input
+   - Builds structured prompt (Prompt Engineering)
+   - Sends request to OpenRouter API
 
-1. Navigate to frontend folder:
-```bash
-cd frontend
-```
+4. AI generates content
 
-2. Install dependencies:
-```bash
-npm install
-```
+5. Response is sent back to frontend and displayed
 
-3. Create `.env` file:
-```bash
-cp .env.example .env
-```
-
-4. Start the development server:
-```bash
-npm start
-```
-
-App opens at: `http://localhost:3000`
-
-## API Endpoints
-
-### POST /api/content/generate
-
-Generate content based on a prompt using Open Router.
-
-**Request:**
-```json
-{
-  "prompt": "Write a blog post about artificial intelligence",
-  "contentType": "blog",
-  "tone": "professional"
-}
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "content": "Generated content text...",
-  "prompt": "...",
-  "contentType": "blog",
-  "tone": "professional"
-}
-```
-
-### GET /api/health
-
-Check backend health status.
-
-## Technologies Used
-
-### Backend
-- Express.js - Web framework
-- Google Generative AI - AI content generation
-- CORS - Cross-origin resource sharing
-- dotenv - Environment variables
-
-### Frontend
-- React 18 - UI library
-- Axios - HTTP client
-- CSS3 - Styling
-
-## Environment Variables
-
-### Backend (.env)
-```
-OpenRouter_API_KEY=your_gemini_api_key
-PORT=5000
-NODE_ENV=development
-FRONTEND_URL=http://localhost:3000
-```
-
-### Frontend (.env)
-```
-REACT_APP_API_URL=http://localhost:5000/api
-```
-
-## Content Types
-
-- **general** - General purpose content
-- **blog** - Blog post format
-- **email** - Email content
-- **social** - Social media posts
-- **product** - Product descriptions
-- **story** - Story or narrative content
-
-## Tones
-
-- **neutral** - Neutral and balanced
-- **professional** - Professional and formal
-- **casual** - Casual and conversational
-- **friendly** - Friendly and warm
-- **formal** - Very formal and official
-
+---
 
