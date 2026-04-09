@@ -9,26 +9,23 @@ Content_Generator/
 ├── backend/          # Express.js server
 │   ├── src/
 │   │   ├── server.js
-│   │   ├── config/
 │   │   ├── controllers/
 │   │   ├── routes/
 │   │   ├── middleware/
-│   │   └── utils/
+│   │
 │   ├── package.json
 │   ├── .env.example
-│   └── README.md
+│   
 │
 └── frontend/         # React application
     ├── src/
     │   ├── components/
-    │   ├── pages/
     │   ├── services/
     │   ├── App.js
     │   └── index.js
     ├── public/
     ├── package.json
     ├── .env.example
-    └── README.md
 ```
 
 ## Features
@@ -64,7 +61,7 @@ npm install
 cp .env.example .env
 ```
 
-4. Get your free Google Gemini API key from [Google AI Studio](https://aistudio.google.com/) and add it:
+4. Get your free Open Router Key and add it:
 OpenRouter_API_KEY=your_key_here
 PORT=5000
 FRONTEND_URL=http://localhost:3000
@@ -105,7 +102,7 @@ App opens at: `http://localhost:3000`
 
 ### POST /api/content/generate
 
-Generate content based on a prompt using Google Gemini.
+Generate content based on a prompt using Open Router.
 
 **Request:**
 ```json
@@ -138,7 +135,6 @@ Check backend health status.
 - Google Generative AI - AI content generation
 - CORS - Cross-origin resource sharing
 - dotenv - Environment variables
-- Gemini 1.5 Flash - Free tier AI model
 
 ### Frontend
 - React 18 - UI library
@@ -149,7 +145,7 @@ Check backend health status.
 
 ### Backend (.env)
 ```
-GEMINI_API_KEY=your_gemini_api_key
+OpenRouter_API_KEY=your_gemini_api_key
 PORT=5000
 NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
@@ -177,10 +173,4 @@ REACT_APP_API_URL=http://localhost:5000/api
 - **friendly** - Friendly and warm
 - **formal** - Very formal and official
 
-## License
 
-MIT License - feel free to use this for your projects!
-
-## Support
-
-For issues or questions, please check the individual README files in the backend and frontend folders.

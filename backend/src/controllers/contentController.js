@@ -8,7 +8,7 @@ const generateContent = async (req, res) => {
       return res.status(400).json({ error: "Prompt is required" });
     }
 
-    // 🎯 Build smart prompt
+    // Build smart prompt
     const fullPrompt = `
 You are an expert content generator.
 
@@ -21,31 +21,27 @@ User Request: ${prompt}
 Generate high-quality content based on the above.
 `;
 
-    // 🔥 OpenRouter API call
+    //  OpenRouter API call
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
         model: "openai/gpt-3.5-turbo", // free & stable
-        messages: [
-          { role: "user", content: fullPrompt }
-        ],
+        messages: [{ role: "user", content: fullPrompt }],
       },
       {
         headers: {
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
         },
-      }
+      },
     );
 
-    const generatedContent =
-      response.data.choices[0].message.content;
+    const generatedContent = response.data.choices[0].message.content;
 
     res.json({
       success: true,
       content: generatedContent,
     });
-
   } catch (error) {
     console.error("FULL ERROR:", error.response?.data || error.message);
 
